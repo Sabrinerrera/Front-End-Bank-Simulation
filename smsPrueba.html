@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Smart Pago Móvil</title>
+    <link rel="stylesheet" href="style_smsPrueba.css">
+    <script src="smsPrueba.js" defer></script>
+</head>
+<body>
+    <div class="phone-container">
+        <img 
+            src="https://static.vecteezy.com/system/resources/previews/011/047/529/non_2x/smartphone-and-mobile-phone-free-png.png" 
+            alt="Imagen de un celular"
+            height="880"
+        />
+        <div class="contenedor">
+            <figure class="perfil">
+                <img src="https://cdn-icons-png.flaticon.com/512/5953/5953496.png" 
+                alt="Icono usuario"
+                width="13%">
+                <figcaption id="tituloB">
+                    <h3>BANCO</h3>
+                </figcaption>
+            </figure>
+            <p class="fecha"><small><span id="fecha">fecha</span> • <span id="hora">hora</span></small></p>
+            <div class="message incoming">
+                <form action="#">
+                    <div class="campo">
+                        <label>Celular del beneficiario</label>
+                        <input id="celularBeneficiario" type="number" required>
+                    </div>
+                    <div class="campo">
+                        <label></br>Cédula del beneficiario</label>
+                        <input id="cedulaBeneficiario" type="number" required>
+                    </div>
+                    <div class="campo">
+                        <label></br>Banco del beneficiario</label>
+                        <input id="bancoBeneficiario" type="text" required>
+                    </div>
+                    <div class="campo">
+                        <label></br>Monto en Bolívares</label>
+                        <input id="monto" type="number" required>
+                    </div>
+                    </br>
+                    <button id="botonEnviar" type="button">Enviar</button>
+            </div>
+            <div id="respuestaBanco" class="message outgoing">
+                <p>Respuesta Banco</p>
+            </div>
+            
+            <!-- Botones del celular -->
+            <div class="boton-retroceso">
+                <a href="menuCelular.html">
+                <img src="https://cdn.icon-icons.com/icons2/1129/PNG/512/arrowbackbutton_79955.png" 
+                alt="retroceder"
+                width="5%"
+                >
+                </a>
+            </div>
+            <div class="boton-casa">
+                <a href="menuCelular.html">
+                <img src="https://cdn.icon-icons.com/icons2/1511/PNG/512/homecircularbuttonwithhouseoutlineshape_104751.png" 
+                alt="casa"
+                width="5%"
+                >
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

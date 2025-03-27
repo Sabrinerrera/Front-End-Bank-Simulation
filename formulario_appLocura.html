@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Smart Pago Móvil</title>
+    <link rel="stylesheet" href="style_formularioAppLocura.css">
+    <script src="script_formularioAppNuevo.js" defer></script>
+</head>
+<body>
+    <div class="phone-container">
+        <img 
+            src="https://static.vecteezy.com/system/resources/previews/011/047/529/non_2x/smartphone-and-mobile-phone-free-png.png" 
+            alt="Imagen de un celular"
+            height="880"
+        />
+        <div class="contenedor">
+            <div class="main">
+                <div class="titulo">
+                    <img src="./img/logoBanco.jpg" alt="Logo del Banco" width="15%">
+                    Mi Pago Móvil Bs
+                    <nav>
+                        <a href="login.html" class="nav-link"><small>Cerrar Sesión</small></a>
+                    </nav>
+                </div>
+                <div class="cuenta">
+                    <div class="dondeEstaQR">
+                        <h4>Datos para pagar</h4>
+                        <figure class="qr">
+                            <a href="#" id="PagoPorQR">
+                            <img src="https://borealtech.com/wp-content/uploads/2018/10/codigo-qr-1024x1024-1.jpg" alt="qr" width="10%">
+                            <figcaption><small>Pago con QR</small></figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <h4 class="tit">Cuenta a debitar</h4>
+                    <div class="datosCuenta">
+                        <p>
+                        Cuenta de Ahorro Bolívares <br/>
+                        123456**********7890 <br/>
+                        </p>
+                        <p class="fondo">
+                            <span id="moneymoney">1.000,00</span> Bs<br/>
+                            Disponible
+                        </p>
+                    </div>
+                    <form action="#">
+                        <div class="campo">
+                            <input id="celularBeneficiario" type="number" required>
+                            <label>Celular del beneficiario</label>
+                        </div>
+                        <div class="campo">
+                            <input id="cedulaBeneficiario" type="number" required>
+                            <label>Cédula del beneficiario</label>
+                        </div>
+                        <div class="campo">
+                            <input id="bancoBeneficiario" type="text" required>
+                            <label>Banco del beneficiario</label>
+                        </div>
+                        <div class="campo">
+                            <input id="monto" type="number" required>
+                            <label>Monto en Bolívares</label>
+                        </div>
+                        <div class="campo">
+                            <input id="asunto" type="text" required>
+                            <label>Asunto</label>
+                        </div>
+                        <div class="campo">
+                            <input id="boton" type="button" value="Siguiente">
+                        </div>
+                    </form>
+                <!-- Botones del celular -->
+                <div class="boton-retroceso">
+                    <a href="login.html">
+                    <img src="https://cdn.icon-icons.com/icons2/1129/PNG/512/arrowbackbutton_79955.png" 
+                    alt="retroceder"
+                    width="5%"
+                    >
+                    </a>
+                </div>
+                <div class="boton-casa">
+                    <a href="menuCelular.html">
+                    <img src="https://cdn.icon-icons.com/icons2/1511/PNG/512/homecircularbuttonwithhouseoutlineshape_104751.png" 
+                    alt="casa"
+                    width="5%"
+                    >
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="confirmacion"></div>
+    <div id="qrAnimation">
+
+        <img id="siento" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Rickrolling_QR_code.png">
+
+        <div id="lineaQR"></div>
+
+    </div>
+        <div id="lineaBio"></div>
+
+</body>
+</html>

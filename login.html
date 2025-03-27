@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema Smart Pago Móvil</title>
+        <link rel="stylesheet" href="style_login.css">
+        <script src="script_login.js" defer></script>
+    </head>
+    <body>
+        <div class="phone-container">
+            <img 
+                src="https://static.vecteezy.com/system/resources/previews/011/047/529/non_2x/smartphone-and-mobile-phone-free-png.png" 
+                alt="Imagen de un celular"
+                height="880"
+            />
+            <div class="content-container">
+                <div class="main">
+                    <input type="checkbox" id="chk" aria-hidden="true">
+
+                    <div class="login">
+                        <form class="form">
+                            <label for="chk" aria-hidden="true">Iniciar Sesión</label>
+                            <input id="loginCorreo" class="input" type="email"
+                            autocomplete="off" name="email"
+                            placeholder="Correo eletrónico" required="">
+                            <input id="loginContrasena" class="input" type="password" name="pswd"
+                            placeholder="Contraseña" required="">
+                            <button id="botonInicioSesion" type="reset">Iniciar Sesión</button>
+                        </form>
+                    </div>
+
+                    <div class="register">
+                        <form class="form">
+                            <label for="chk" aria-hidden="true">Registrarse</label>
+                            <input id="registroUsuario" class="input" type="text" name="txt"
+                            placeholder="Nombre de usuario" autocomplete="off" required="">
+                            <input id="registroCorreo" class="input" type="email" name="email"
+                            placeholder="Correo eletrónico" autocomplete="off" required="">
+                            <input id="registroContrasena" class="input" type="password" name="pswd"
+                            placeholder="Contraseña" required="">
+                            <button id="botonRegistro" class="boton" type="reset">Registrarse</button>
+                        </form>
+                    </div>
+                    <!-- Botones del celular -->
+                    <div class="boton-retroceso">
+                        <a href="menuCelular.html">
+                        <img src="https://cdn.icon-icons.com/icons2/1129/PNG/512/arrowbackbutton_79955.png" 
+                        alt="retroceder"
+                        width="5%"
+                        >
+                        </a>
+                    </div>
+                    <div class="boton-casa">
+                        <a href="menuCelular.html">
+                        <img src="https://cdn.icon-icons.com/icons2/1511/PNG/512/homecircularbuttonwithhouseoutlineshape_104751.png" 
+                        alt="casa"
+                        width="5%"
+                        >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+/*Esto es para establecer tipo de fuente (texto escogido de Google Fonts). Afectará a toda la simulación*/
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Centrar el contenedor principal (el celular)*/
+.phone-container{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+}
+
+/* Aqui doy tamnio a la pantalla del celular */
+.contenedor{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 380px;
+    height: 800px;
+    background: #fff;
+    border-radius: 40px;
+}
+
+/* Botones celular */
+.boton-casa{
+    position: absolute;
+    left: 245px;
+    width: 140%;
+    bottom: 1%;
+}
+.boton-retroceso{
+    position: absolute;
+    left: 120px;
+    width: 140%;
+    bottom: 1%;
+}
+
+.fondotlf img{
+    height: 808px;
+    width: 380px;
+    border-radius: 40px;
+}
+
+.app img{
+    border-radius: 50%;
+}
+.app{
+    z-index: 1;
+    position: absolute;
+    left: 50px;
+    bottom: 70px;
+}
+.sms{
+    z-index: 1;
+    position: absolute;
+    left: 265px;
+    bottom: 70px;
+    width: 80%;
+}

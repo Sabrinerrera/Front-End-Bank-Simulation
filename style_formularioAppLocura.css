@@ -1,0 +1,285 @@
+/*Esto es para establecer tipo de fuente (texto escogido de Google Fonts). Afectará a toda la simulación*/
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Centrar el contenedor principal (el celular)*/
+.phone-container{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    /*left: 20%;*/
+}
+
+/* Aqui doy tamnio a la pantalla del celular */
+.contenedor{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 380px;
+    height: 300px;
+    background: #fff;
+    border-radius: 40px;
+ 
+}
+
+/* Botones celular */
+.boton-casa{
+    position: absolute;
+    left: 245px;
+    width: 140%;
+}
+.boton-retroceso{
+    position: absolute;
+    left: 125px;
+    width: 140%;
+}
+
+/* Aqui cuadre la parte donde se encuentra el logo (color letras, tamanio, color fondo, etc) */
+.titulo{
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 40px 40px 0px 0px;
+    background: #240046;
+    bottom: 44px;
+}
+
+/* Toda una seccion para cuadrar adecuadamente el logo del banco (el senior con gafas) */
+.titulo img{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: center;
+    margin-left: center;
+    border-radius: 40px;
+    left: 28px;
+    top: 4px;
+}
+
+/* Esto fue para dar color y decoracion a los hipervinculos (Cerrar sesion, Pago con QR) */
+a {
+    color: hwb(286 72% 6%);
+    text-decoration: underline;
+}
+
+/* Aqui cuadre la parte donde se encuentra el qr (margenes, color letra, fondo, etc) */
+.dondeEstaQR{
+    position: relative;
+    color: #fff;
+    background: #240046;
+    margin-top: 12%;
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height: 15px;
+    text-align: center;
+    bottom: 80px;
+    
+}
+
+/* Cuadrando lo que dice: "Cuenta a debitar" (solo posicionandolo)*/
+.tit{
+    position: relative;
+    margin-inline: 3%;
+    margin-top: 3%;
+    bottom: 70px;
+}
+
+/* Cuadrar QR (para que no este tan pegado arriba) */
+.qr{
+    margin-top: 1%;
+}
+
+/* Cuadrando la parte en donde sale "Cuenta de Ahorro Bolivares" */
+.datosCuenta{
+    position: relative;
+    height: 100px;
+    width: 356px;
+    background-color: #fff;
+    margin-left: 3%;
+    margin-top: 1%;
+    border: 1px solid #240046;
+    /* Con padding establezco margen del texto con respecto al borde del recuadro, porque no queria que se viera muy junto en el lado de la izquierda*/
+    padding-left: 3px;
+    bottom: 65px; 
+}
+
+/* Esto es para posicionar y cuadrar las casillas de rellenar datos */
+.contenedor form{
+    padding: 10px 3px 50px 30px;
+}
+
+/* Cuadrando aun mas las casillas de rellenar datos (espacio entre cada una, etc) */
+.campo{
+    position: relative;
+    height: 47px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Especificaciones de la forma que tendra cada casilla de rellenar datos (la redondez, color, tamanio fuente, etc) */
+.campo input{
+    height: 90%;
+    width: 90%;
+    padding-left: 20px;
+    border-radius: 25px;
+    outline: none;
+    font-size: 17px;
+    border: 1px solid lightgrey;
+    transition: all 0.3s ease;
+}
+
+/* Esto provoca que, cuando se presiona alguna casilla, el borde de la misma cambie de color */
+.campo input:focus,
+.campo input:valid{
+    border-color: #240046;
+}
+
+/* Contiene disenio del texto que esta dentro de la casilla de rellenar datos, asi como especificaciones de su respectiva animacion */
+.campo label{
+    position: absolute;
+    top: 45%;
+    left: 20px;
+    font-size: 17px;
+    color: #999;
+    transform: translateY(-45%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Aqui, cuando presionas la casilla rellenar datos, se realiza animacion y cambia de color la letra */
+.campo input:focus ~ label,
+.campo input:valid ~ label{
+    top: 0%;
+    color:#240046;
+    font-size: 16px;
+    background: #fff;
+    transform: translateY(-45%);
+}
+
+/* Especificaciones del disenio del boton ue dice "Siguiente" (color fondo, letra, y transicion al dar click */
+.campo input[type="button"]{
+    color:#fff;
+    background: #240046;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    padding-left: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Especificacion de animacion que ocurre cuando se presiona boton */
+.campo input[type="submit"]:active{
+  transform: scale(0.95);  
+}
+
+#overlay {
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+    position:fixed;
+    left:0;
+    top: 0;
+    width:100%;
+    height:100%;
+    transition: 5s
+  }
+
+  #confirmacion {
+    background-color: white;
+    width: 350px; /* Ancho del div */
+    height: 450px; /* Alto del div */
+    margin: auto; /* Centra el div horizontalmente si se usa con position: absolute o fixed */
+    margin-top: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+#qrAnimation{
+
+    display:    none;
+
+}
+
+#siento{
+
+    position:absolute;
+    display: block;
+    margin: auto;
+    margin-top: 14%;
+    width: 300;
+    height: 300px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+#lineaQR{
+
+    position: absolute;
+    margin: auto;
+    margin-top: 14%;
+    top: -25%;
+    left: 0;
+    bottom: -45%;
+    right: 0;
+    display: block;
+    width: 300px;
+    height: 1%;
+    background-color: red;
+    animation: mover1 1.5s infinite alternate;
+
+    
+}
+
+#lineaBio{
+
+    position: absolute;
+    margin: auto;
+    margin-top: 14%;
+    top: -25%;
+    left: 0;
+    bottom: -45%;
+    right: 0;
+    display: none;
+    width: 150px;
+    height: 1%;
+    background-color: green;
+    animation: mover2 1.5s infinite alternate;
+
+    
+}
+
+@keyframes mover1 {
+    
+    from{top:30%}
+    to{top:-2%}
+
+}
+
+@keyframes mover2 {
+    
+    from{top:3.8%}
+    to{top:18%}
+
+}

@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centrar el contenedor principal (el celular)*/
+.phone-container{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+}
+
+/* Aqui doy tamnio a la pantalla del celular */
+.contenedor {
+    position: absolute;
+    height: 760px;
+    width: 330px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones celular */
+.boton-casa{
+    position: absolute;
+    left: 235px;
+    width: 140%;
+    bottom: 1%;
+}
+.boton-retroceso{
+    position: absolute;
+    left: 110px;
+    width: 135%;
+    bottom: 1%;
+}
+
+/* Encabezado (donde esta BANCO) */
+.perfil{
+    position: relative;
+    margin-top: -12%;
+    margin-left: -8%;
+    width: 116%;
+    height: 8%;
+    border-radius: 40px 40px 0px 0px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.perfil img{
+    position: absolute;
+    position: absolute;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-right: center;
+    margin-left: center;
+    border-radius: 40px;
+    left: 17px;
+    top: 6px;
+}
+
+#tituloB{
+    position: relative;
+    left: 80px;
+    top: 20px;
+}
+
+/* Acomodando fecha */
+.fecha{
+    text-align: center;
+    margin-top: 10%;
+}
+
+/* Estilos para los mensajes */
+.message{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message.incoming{
+    background-color: #d3f7d3;
+    border-radius: 5%;
+    text-align: right;
+    margin-left: 15%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.message.outgoing{
+    margin-top: 5%;
+    background-color: #e6e6e6;
+    border-radius: 5%;
+    text-align: left;
+    margin-right: 15%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.message button{
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.message input{
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    height: 40%;
+    width: 70%;
+    padding-left: 20px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 17px;
+}
+
+#respuestaBanco{
+display: none;
+}
